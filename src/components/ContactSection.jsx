@@ -112,6 +112,7 @@ const ContactSection = () => {
                   name="email"
                   type="email"
                   id="email"
+                  autoComplete="off"
                   required
                   className="dark:bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] dark:text-gray-100 text-black  text-sm rounded-lg block w-full p-2.5"
                   placeholder="example@google.com"
@@ -129,6 +130,7 @@ const ContactSection = () => {
                   name="subject"
                   type="text"
                   id="subject"
+                  autoComplete="off"
                   required
                   className="dark:bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] dark:text-gray-100 text-black  text-sm rounded-lg block w-full p-2.5"
                   placeholder="Just saying hi"
@@ -146,6 +148,7 @@ const ContactSection = () => {
                   onChange={(e) => setMessage(e.target.value)}
                   name="message"
                   id="message"
+                  autoComplete="off"
                   className="dark:bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] dark:text-gray-100 text-black  text-sm rounded-lg block w-full p-2.5"
                   placeholder="Let's talk about..."
                 />

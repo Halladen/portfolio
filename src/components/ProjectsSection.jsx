@@ -7,11 +7,8 @@ import QuoteImg from "../images/projects/quote.png";
 import noteImg from "../images/projects/dragdrop.png";
 import converterImg from "../images/projects/converter.png";
 import taskImg from "../images/projects/task.png";
-import calculatorImg from "../images/projects/calculator.png";
 import ProjectTag from "./ProjectTag";
 import { useScroll } from "../contexts/ScrollContext";
-import { motion } from "framer-motion";
-import { div } from "framer-motion/client";
 
 const projectsData = [
   {
@@ -94,11 +91,9 @@ const ProjectsSection = () => {
     <section
       ref={projectsSectionRef}
       id="projects"
-      className="text-black dark:text-white my-10 "
+      className="text-black dark:text-white my-10"
     >
-      <h2 className=" text-center text-4xl font-bold mt-4 mb-8 md:mb-12">
-        My Projects
-      </h2>
+      <h2 className="text-4xl text-center font-bold mt-16 mb-10">Projects</h2>
       <div className="flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
           onClick={handleTagChange}

@@ -7,6 +7,7 @@ export const ScrollProvider = ({ children }) => {
   const projectsSectionRef = useRef(null);
   const contactSectionRef = useRef(null);
   const heroSectionRef = useRef(null);
+  const skillsSectionRef = useRef(null);
 
   return (
     <ScrollContext.Provider
@@ -15,6 +16,7 @@ export const ScrollProvider = ({ children }) => {
         heroSectionRef,
         projectsSectionRef,
         contactSectionRef,
+        skillsSectionRef,
       }}
     >
       {children}

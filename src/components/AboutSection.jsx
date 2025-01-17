@@ -7,51 +7,10 @@ import { PiCertificateFill } from "react-icons/pi";
 import { useTheme } from "../contexts/ThemeContext.jsx";
 import degree from "../images/degree.webp";
 
-const TAB_DATA = [
-  {
-    title: "Skills",
-    id: "skills",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>Python</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Django</li>
-        <li>SQL</li>
-        <li>FastAPI</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Education",
-    id: "education",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>University of Sulaimanyah</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Certifications",
-    id: "certifications",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>PDA Software Development</li>
-        <li>CodeSpace - Software Development</li>
-      </ul>
-    ),
-  },
-];
 const AboutSection = () => {
   const { theme } = useTheme();
   const { aboutSectionRef } = useScroll();
-  const [tab, setTab] = useState("skills");
-  const [isPending, startTransition] = useTransition();
-  const handleTabChange = (id) => {
-    startTransition(() => {
-      setTab(id);
-    });
-  };
+
   return (
     <section
       ref={aboutSectionRef}
@@ -92,29 +51,3 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
-
-{
-  /* <div className="flex flex-row justify-start mt-8 ">
-            <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
-            >
-              Skills{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("education")}
-              active={tab === "education"}
-            >
-              Education{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
-            >
-              Certifications{" "}
-            </TabButton>
-          </div>
-          <div className="mt-8">
-            {TAB_DATA.find((t) => t.id == tab).content}
-          </div> */
-}

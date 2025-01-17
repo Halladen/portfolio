@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import myPic from "../images/mypic.png";
+import heroPic from "../images/hero.webp";
 import { TypeAnimation } from "react-type-animation";
 import { useScroll } from "../contexts/ScrollContext";
 import { useTheme } from "../contexts/ThemeContext";
@@ -38,7 +39,7 @@ const HeroSection = () => {
             <img
               className=" rounded-full inset-0 bg-white dark:bg-black"
               // src={theme == "light" ? devPic : devPicDark}
-              src={myPic}
+              src={heroPic}
               alt="Developer image"
               loading="lazy"
               // width={300}
@@ -50,7 +51,7 @@ const HeroSection = () => {
         {/* hero container */}
         <div className="w-full md:w-1/2  min-h-full text-center md:text-left ">
           <div className="text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-            Hello I'm{" "}
+            Hello I'm
           </div>
 
           <div className="my-5">
