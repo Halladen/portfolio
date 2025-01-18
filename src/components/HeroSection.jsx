@@ -20,9 +20,8 @@ const HeroSection = () => {
     <section ref={heroSectionRef} className=" py-10">
       <div className="h-full flex flex-col md:flex-row justify-center items-center gap-20  text-black dark:text-white">
         {/* image comtainer */}
-        <div className="relative flex-shrink-0 w-[300px] h-[300px] md:ml-auto">
+        <div className="relative flex-shrink-0 w-[300px] h-[300px] md:ml-auto flex justify-center items-center">
           {/* spinning border */}
-
           <div
             className="conic-container w-full h-full rounded-full motion-safe:animate-spin-slow"
             style={{
@@ -33,15 +32,17 @@ const HeroSection = () => {
 
           {/* static image */}
           <div className="absolute top-0 p-1 rounded-full  w-full h-full flex justify-center items-center">
-            <img
-              className=" rounded-full w-full inset-0 bg-white dark:bg-black"
-              // src={theme == "light" ? devPic : devPicDark}
-              src="/images/hero.webp"
-              alt="Developer image"
-              // loading="lazy"
-              // width={300}
-              // height={300}
-            />
+            <div className="bg-white dark:bg-black w-full h-full rounded-full">
+              <img
+                className=" rounded-full w-full inset-0 bg-white dark:bg-black"
+                // src={theme == "light" ? devPic : devPicDark}
+                src="/images/hero.webp"
+                alt="Developer image"
+                // loading="lazy"
+                // width={300}
+                // height={300}
+              />
+            </div>
           </div>
         </div>
 
