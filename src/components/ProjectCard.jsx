@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/16/solid";
-import { motion } from "framer-motion";
 const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
   return (
     <div>
@@ -30,7 +29,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
           </Link>
           <Link
             target="_blank"
-            to={previewUrl}
+            to={previewUrl || "#"}
             className="h-14 w-14 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link"
           >
             <EyeIcon className="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  cursor-pointer group-hover/link:text-white" />
@@ -40,8 +39,18 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
 
       <div className="dark:text-white rounded-b-xl py-6 text-center">
         <h5 className="text-xl font-semibold mb-2">{title}</h5>
-        <div className="">
+        <div className="flex flex-nowrap justify-between items-center my-5">
           <Link
+            className="inline-block w-[45%] h-full"
+            target="_blank"
+            to={gitUrl}
+            rel="noopener noreferrer"
+          >
+            <div className="text-white py-3 rounded-xl  bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-700 ">
+              GitHub
+            </div>
+          </Link>
+          {/* <Link
             className={`${previewUrl ? "sm:inline-block" : ""} `}
             target="_blank"
             to={gitUrl}
@@ -49,9 +58,24 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
             <div className="text-white mt-3 px-6 w-full py-3 rounded-xl  bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-700 ">
               GitHub
             </div>
+          </Link> */}
+
+          <Link
+            className={`inline-block w-[45%] h-full ${
+              !previewUrl ? "pointer-events-none opacity-80" : ""
+            }`}
+            target={previewUrl ? "_blank" : undefined}
+            to={previewUrl || "#"}
+            rel={previewUrl ? "noopener noreferrer" : undefined}
+          >
+            <button className="px-1 py-1 w-full  rounded-xl bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-800 text-white">
+              <span className="block bg-[#121212] hover:bg-slate-800 rounded-xl px-5 py-2">
+                {previewUrl ? "Live Demo" : "No Demo"}
+              </span>
+            </button>
           </Link>
 
-          {previewUrl && (
+          {/* {previewUrl && (
             <Link className="sm:ml-4" target="_blank" to={previewUrl}>
               <button className="px-1 py-1 w-full sm:w-fit rounded-xl bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-800 text-white  mt-3">
                 <span className="block bg-[#121212] hover:bg-slate-800 rounded-xl px-5 py-2">
@@ -59,7 +83,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
                 </span>
               </button>
             </Link>
-          )}
+          )} */}
         </div>
       </div>
     </div>

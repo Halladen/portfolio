@@ -27,7 +27,7 @@ const projectsData = [
     id: 2,
     title: "E-commerce",
     description: "",
-    image: "/images/projects/sort-algorithm.webp",
+    image: "/images/projects/ecommerce.webp",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Halladen/e_commerce",
     previewUrl: "",
