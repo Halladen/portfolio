@@ -1,4 +1,3 @@
-
 import React from "react";
 import heroPic from "../images/hero.webp";
 import { TypeAnimation } from "react-type-animation";
@@ -36,7 +35,7 @@ const HeroSection = () => {
           {/* static image */}
           <div className="absolute top-0 p-1 rounded-full  w-full h-full flex justify-center items-center">
             <img
-              className=" rounded-full inset-0 bg-white dark:bg-black"
+              className=" rounded-full w-full inset-0 bg-white dark:bg-black"
               // src={theme == "light" ? devPic : devPicDark}
               src={heroPic}
               alt="Developer image"
