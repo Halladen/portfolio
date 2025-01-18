@@ -41,7 +41,7 @@ const HeroSection = () => {
               // src={theme == "light" ? devPic : devPicDark}
               src={heroPic}
               alt="Developer image"
-              loading="lazy"
+              // loading="lazy"
               // width={300}
               // height={300}
             />
