@@ -1,4 +1,4 @@
-"use client";
+
 import React from "react";
 import heroPic from "../images/hero.webp";
 import { TypeAnimation } from "react-type-animation";
