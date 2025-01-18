@@ -46,19 +46,10 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
             to={gitUrl}
             rel="noopener noreferrer"
           >
-            <div className="text-white py-3 rounded-xl  bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-700 ">
+            <div className="text-white py-3 rounded-full  bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-700 ">
               GitHub
             </div>
           </Link>
-          {/* <Link
-            className={`${previewUrl ? "sm:inline-block" : ""} `}
-            target="_blank"
-            to={gitUrl}
-          >
-            <div className="text-white mt-3 px-6 w-full py-3 rounded-xl  bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-700 ">
-              GitHub
-            </div>
-          </Link> */}
 
           <Link
             className={`inline-block w-[45%] h-full ${
@@ -68,22 +59,15 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
             to={previewUrl || "#"}
             rel={previewUrl ? "noopener noreferrer" : undefined}
           >
-            <button className="px-1 py-1 w-full  rounded-xl bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-800 text-white">
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-xl px-5 py-2">
+            <button
+              title={!previewUrl ? "Demo not available for this project" : ""}
+              className="px-1 py-1 w-full  rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-800 text-white"
+            >
+              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
                 {previewUrl ? "Live Demo" : "No Demo"}
               </span>
             </button>
           </Link>
-
-          {/* {previewUrl && (
-            <Link className="sm:ml-4" target="_blank" to={previewUrl}>
-              <button className="px-1 py-1 w-full sm:w-fit rounded-xl bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-800 text-white  mt-3">
-                <span className="block bg-[#121212] hover:bg-slate-800 rounded-xl px-5 py-2">
-                  Live Demo
-                </span>
-              </button>
-            </Link>
-          )} */}
         </div>
       </div>
     </div>
