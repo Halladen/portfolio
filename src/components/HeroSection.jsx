@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import myPic from "../images/mypic.png";
 import heroPic from "../images/hero.webp";
 import { TypeAnimation } from "react-type-animation";
 import { useScroll } from "../contexts/ScrollContext";
