@@ -1,5 +1,4 @@
 import React from "react";
-import heroPic from "../../public/images/hero.webp";
 import { TypeAnimation } from "react-type-animation";
 import { useScroll } from "../contexts/ScrollContext";
 import { useTheme } from "../contexts/ThemeContext";
@@ -37,7 +36,7 @@ const HeroSection = () => {
             <img
               className=" rounded-full w-full inset-0 bg-white dark:bg-black"
               // src={theme == "light" ? devPic : devPicDark}
-              src={heroPic}
+              src="/images/hero.webp"
               alt="Developer image"
               // loading="lazy"
               // width={300}
