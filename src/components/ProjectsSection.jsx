@@ -1,12 +1,5 @@
 import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
-import myMovie from "../images/projects/mymovie.png";
-import ecommerceImg from "../images/projects/ecommerce.png";
-import sortingImg from "../images/projects/sort-algorithm.png";
-import QuoteImg from "../images/projects/quote.png";
-import noteImg from "../images/projects/dragdrop.png";
-import converterImg from "../images/projects/converter.png";
-import taskImg from "../images/projects/task.png";
 import ProjectTag from "./ProjectTag";
 import { useScroll } from "../contexts/ScrollContext";
 
@@ -15,7 +8,7 @@ const projectsData = [
     id: 0,
     title: "MyMovie",
     description: "",
-    image: myMovie,
+    image: "../../public/images/projects/mymovie.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Halladen/mymovie",
     previewUrl: "https://halladen-mymovie.netlify.app/",
@@ -25,7 +18,7 @@ const projectsData = [
     id: 1,
     title: "Sorting Algorithms",
     description: "",
-    image: sortingImg,
+    image: "../../public/images/projects/sort-algorithm.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Halladen/sorting-algorithms",
     previewUrl: "https://halladed-sorting-algorithms.netlify.app/",
@@ -34,7 +27,7 @@ const projectsData = [
     id: 2,
     title: "E-commerce",
     description: "",
-    image: ecommerceImg,
+    image: "../../public/images/projects/sort-algorithm.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Halladen/e_commerce",
     previewUrl: "",
@@ -43,7 +36,7 @@ const projectsData = [
     id: 3,
     title: "Drag & Drop Notes",
     description: "",
-    image: noteImg,
+    image: "../../public/images/projects/dragdrop.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Halladen/drag-drop-notes",
     previewUrl: "",
@@ -52,7 +45,7 @@ const projectsData = [
     id: 4,
     title: "Quote Machine",
     description: "",
-    image: QuoteImg,
+    image: "../../public/images/projects/quote.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Halladen/quote-machine",
     previewUrl: "",
@@ -61,7 +54,7 @@ const projectsData = [
     id: 5,
     title: "Currency Converter",
     description: "",
-    image: converterImg,
+    image: "../../public/images/projects/converter.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Halladen/currency-converter",
     previewUrl: "",
@@ -70,7 +63,7 @@ const projectsData = [
     id: 6,
     title: "Task Manager",
     description: "",
-    image: taskImg,
+    image: "../../public/images/projects/task.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Halladen/task-manager",
     previewUrl: "",

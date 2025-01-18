@@ -10,6 +10,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
           src={imgUrl}
           alt={title}
           className="w-full rounded-xl h-full object-fill"
+          loading="lazy"
         />
       </div>
       <div

@@ -1,5 +1,5 @@
 import React from "react";
-import heroPic from "../images/hero.webp";
+import heroPic from "../../public/images/hero.webp";
 import { TypeAnimation } from "react-type-animation";
 import { useScroll } from "../contexts/ScrollContext";
 import { useTheme } from "../contexts/ThemeContext";

@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       animation: {
-        "spin-slow": "spin 50s linear infinite", // 3 seconds
+        "spin-slow": "spin 300s linear infinite", // 3 seconds
       },
     },
   },

@@ -1,11 +1,8 @@
 import React, { useState, useTransition } from "react";
-import aboutImage from "../images/about.jpg";
-import TabButton from "./TabButton.jsx";
 import { useScroll } from "../contexts/ScrollContext.jsx";
 import { GiAchievement } from "react-icons/gi";
 import { PiCertificateFill } from "react-icons/pi";
 import { useTheme } from "../contexts/ThemeContext.jsx";
-import degree from "../images/degree.webp";
 
 const AboutSection = () => {
   const { theme } = useTheme();
