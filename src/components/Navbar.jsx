@@ -72,23 +72,23 @@ const Navbar = () => {
   return (
     <nav
       id="navbar"
-      className="fixed w-screen top-0 left-0 right-0 z-10 bg-slate-100  text-black dark:bg-black dark:text-white"
+      className="fixed w-full top-0 left-0 z-10 bg-slate-100  text-black dark:bg-black dark:text-white"
     >
-      <div className="min-h-16 flex  items-center justify-between md:justify-around px-12 md:px-0 py-2">
+      <div className="min-h-16 flex  items-center justify-between md:justify-around px-5 md:px-0 py-2">
         {/* Logo */}
         <Link
           onClick={() => {
             scrollToSection("Hero");
             setIsNavOpen(false);
           }}
-          className="text-2xl   font-extrabold hover:text-slate-500"
+          className="text-xl md:text-2xl font-extrabold hover:text-slate-500"
           to="/"
         >
           Riyadh
         </Link>
 
         {/* theme button */}
-        <div className="flex justify-center items-center gap-10 md:gap-20 font-semibold">
+        <div className="flex justify-center items-center gap-5 md:gap-20 font-semibold">
           <button
             onClick={toggleTheme}
             className="hover:text-slate-500 text-xl"
@@ -121,14 +121,14 @@ const Navbar = () => {
                 className="flex items-center px-3   hover:text-slate-500 "
               >
                 {/* we have to define hight and width to Iconst to display */}
-                <Bars3Icon className="h-7 w-7" />
+                <Bars3Icon className="h-8 w-8" />
               </button>
             ) : (
               <button
                 onClick={() => setIsNavOpen(false)}
                 className="flex items-center px-3   hover:text-slate-500 "
               >
-                <XMarkIcon className="h-7 w-7" />
+                <XMarkIcon className="h-8 w-8" />
               </button>
             )}
           </div>
